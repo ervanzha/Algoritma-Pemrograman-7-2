@@ -1,0 +1,17 @@
+@author: ervan
+"""
+
+def ordinal_num(x):
+    a = lambda x :"(%d, '%s')" % (x,{1:"st",2:"nd",3:"rd"}.get(x if x < 20 else x % 10,"th"))
+    print ("Ordinalnya :"+ (a(x)))
+  
+print("Masukan Angka")
+print("Ketik [0] salah")
+loop = True
+while loop == True:
+    x = int(input("Masukan Ankga : "))
+    if x == 0 :
+        loop = False
+        break
+    else:
+        ordinal_num(x)
